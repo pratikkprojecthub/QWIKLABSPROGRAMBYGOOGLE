@@ -1,7 +1,7 @@
 GSP313: Create and Manage Cloud Resources 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Task 1 : Create a Compute Engine instance, add necessary firewall rules
+----------------------------------------------------------Task 1 : Create a Compute Engine instance, add necessary firewall rules--------------------------------------
+
 
 Goto Compute Engine 
 ----> VM Instances 
@@ -14,7 +14,7 @@ gcloud compute instances create nucleus-jumphost \
           --image-family debian-9  \
           --image-project debian-cloud
 
------------------------------------------------------------------Task 2: Create a Kubernetes service cluster---------------------------------------------
+---------------------------------------------------------Task 2: Create a Kubernetes service cluster---------------------------------------------
 
 gcloud container clusters create nucleus-backend \
           --num-nodes 1 \
@@ -33,8 +33,7 @@ kubectl expose deployment hello-server \
           --type=LoadBalancer \
           --port 8080
           
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-Task 3: Set up an HTTP load balancer
+----------------------------------------------------------Task 3: Set up an HTTP load balancer-------------------------------------------------
 
 cat << EOF > startup.sh
 #! /bin/bash
