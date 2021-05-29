@@ -40,6 +40,8 @@ kubectl expose deployment hello-server \
           
 ----------------------------------------------------------Task 3: Set up an HTTP load balancer-------------------------------------------------
 ------------------------------Select this together--------------------------------------------------
+
+
 cat << EOF > startup.sh
 
 #! /bin/bash
@@ -54,7 +56,9 @@ sed -i -- 's/nginx/Google Cloud Platform - '"\$HOSTNAME"'/' /var/www/html/index.
 
 EOF
 
-------------------------------------------------------------------------------------------------------
+------------------------------------------------------------Done------------------------------------------
+
+
 gcloud compute instance-templates create web-server-template \
           --metadata-from-file startup-script=startup.sh \
           --network nucleus-vpc \
