@@ -3,6 +3,7 @@ GSP 315 : Perform Foundational Infrastructure Tasks in Google Cloud: Challenge L
 -------------------TASK 1: Remove the overly permissive rules--------------------
 
 IN CLOUD SHELL: 
+
 gcloud auth list
 
 gcloud config list project
@@ -13,7 +14,7 @@ gcloud compute firewall-rules delete open-access
 
 -------------------TASK 2: Start the bastion host instance--------------
 
-or use 
+ Go to Compute Engine and start Bastion instance or use 
 
 gcloud compute instances start bastion
 
