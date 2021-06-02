@@ -1,4 +1,4 @@
-GSP 315 : Perform Foundational Infrastructure Tasks in Google Cloud: Challenge Lab
+GSP322 : Build and Secure Networks in Google Cloud: Challenge Lab
 
 -------------------TASK 1: Remove the overly permissive rules--------------------
 
