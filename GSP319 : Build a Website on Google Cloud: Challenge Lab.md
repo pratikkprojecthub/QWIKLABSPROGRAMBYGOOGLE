@@ -1,7 +1,7 @@
-------------------------------------------------------GSP319 : Build a Website on Google Cloud: Challenge Lab--------------------------------------------------
+------------------------------------------------------GSP319 : Build a Website on Google Cloud: Challenge Lab-----------------------------------------
 
 
------------------------------------------------------Task 1: Download the monolith code and build your container ------------------------------------------
+-----------------------------------------------------Task 1: Download the monolith code and build your container ----------------------------------
 
 git clone https://github.com/googlecodelabs/monolith-to-microservices.git
 
@@ -21,7 +21,7 @@ gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/fancytest:1.0.0 .
 ------------------------------------------------------------------------------------------------------------
 
 
------------------------------------------------------Task 2: Create a kubernetes cluster and deploy the application------------------------------------------
+-----------------------------------------------------Task 2: Create a kubernetes cluster and deploy the application-------------------------------
 
 gcloud config set compute/zone us-central1-a
 
@@ -37,7 +37,7 @@ kubectl expose deployment fancytest --type=LoadBalancer --port 80 --target-port 
 ------------------------------------------------------------------------------------------------------------
 
 
------------------------------------------------------Task 3: Create a containerized version of your Microservices------------------------------------------
+-----------------------------------------------------Task 3: Create a containerized version of your Microservices----------------------------------
 
 cd ~/monolith-to-microservices/microservices/src/orders
 
@@ -86,6 +86,6 @@ kubectl expose deployment frontend --type=LoadBalancer --port 80 --target-port 8
 
 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
-------------------------------------------------------Congratulations--------------------------------------------------------------------------------------------
+------------------------------------------------------Congratulations---------------------------------------------------------------------------
