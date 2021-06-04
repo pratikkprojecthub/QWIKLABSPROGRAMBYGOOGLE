@@ -19,8 +19,11 @@ resources:
   properties:
     zone: {{ properties["zone"] }}
     machineType: https://www.googleapis.com/compute/v1/projects/{{ env["project"] }}/zones/{{ properties["zone"] }}/machineTypes/f1-micro
+    
     # For examples on how to use startup scripts on an instance, see:
+    
     #   https://cloud.google.com/compute/docs/startupscript
+    
     disks:
     - deviceName: boot
       type: PERSISTENT
@@ -31,6 +34,7 @@ resources:
         sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/debian-9
     networkInterfaces:
     - network: https://www.googleapis.com/compute/v1/projects/{{ env["project"] }}/global/networks/default
+    
       # Access Config required to give the instance a public IP address
       accessConfigs:
       - name: External NAT
