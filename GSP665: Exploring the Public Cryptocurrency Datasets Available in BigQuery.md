@@ -27,31 +27,14 @@ SELECT * FROM `bigquery-public-data.crypto_bitcoin.transactions` as transactions
 
 ---------------------------------------------------------------------------Task 3: Validate the data ------------------------------------------------------------
 
+just change bitcoin to dogecoin-------------------
 
--- SQL source from https://cloud.google.com/blog/products/data-analytics/introducing-six-new-cryptocurrencies-in-bigquery-public-datasets-and-how-to-analyze-them
-WITH double_entry_book AS (
-   -- debits
-   SELECT
-    array_to_string(inputs.addresses, ",") as address
-   , inputs.type
-   , -inputs.value as value
+
    FROM `bigquery-public-data.crypto_dogecoin.inputs` as inputs
-   UNION ALL
-   -- credits
-   SELECT
-    array_to_string(outputs.addresses, ",") as address
-   , outputs.type
-   , outputs.value as value
+
    FROM `bigquery-public-data.crypto_dogecoin.outputs` as outputs
-)
-SELECT
-   address
-,   type   
-,   sum(value) as balance
-FROM double_entry_book
-GROUP BY 1,2
-ORDER BY balance DESC
-LIMIT 100
+
+
 
 -----------------------------------------------------------------------------------------------------------------------
 
